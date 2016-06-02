@@ -1,0 +1,49 @@
+
+<div class="row"  ng-controller="MainController">
+  <table class="table table-bordered table-striped">
+    
+    <thead>
+      <tr>
+        <td>
+            de 
+        </td>
+        <td>
+          destination 
+        </td>
+        <td>
+          content 
+        </td>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr ng-repeat="msg in msgs">
+        <td>{{ msg.de }}</td>
+        <td>{{ msg.destination }}</td>
+        <td>{{ msg.content }}</td>
+      </tr>
+    </tbody>
+    
+  </table>
+  
+
+</div>
+
+    <div class="container" id="msg-form" >
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+                   
+                        <input type="text" class="form-control input-lg text-center" placeholder="" ng-model="formData.de">
+                        <input type="text" class="form-control input-lg text-center" placeholder="" ng-model="formData.destination">
+                        <input type="text" class="form-control input-lg text-center" placeholder="" ng-model="formData.content">
+                    </div>
+
+                 
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="createMsg()">Add</button>
+                </form>
+            </div>
+            </div>
+       
+</div>        
